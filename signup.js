@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // if (!validatePassword(password)) {
-        //     registerError.textContent = "Password must be at least 8 characters, include a number, a lowercase, and an uppercase letter.";
-        //     return;
-        // }
+        if (!validatePassword(password)) {
+            registerError.textContent = "Password must be at least 8 characters, include a number, a lowercase, and an uppercase letter.";
+            return;
+        }
 
         const users = getUserData();
         if (users[username]) {
